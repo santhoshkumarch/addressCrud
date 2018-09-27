@@ -1,0 +1,22 @@
+<!-- <h3>Top Heroes</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let hero of heroes" class="col-1-4"
+      routerLink="/detail/{{hero.id}}">
+    <div class="module hero">
+      <div>
+      <h4>{{hero.firstname}} {{hero.lastName}}</h4>
+    </div>
+  </a>
+</div> -->
+
+<!-- <app-hero-search></app-hero-search> -->
+
+<div class="continer">
+<h3 style="margin: 10px 0 0 10px">Address</h3>
+    <mat-card class="example-card" *ngFor="let hero of heroes" routerLink = "/detail/{{hero.id}}">
+      <!-- <mat-card class="example-card" *ngFor="let hero of heroes" (click) = "openSheet(id)"> -->
+      <h4>{{hero.firstname}} {{hero.lastname}}</h4>
+      <h5>{{hero.address1}} {{hero.address2}}</h5>
+      <h6>{{hero.city}} {{hero.state}} - {{hero.pin}}</h6>
+      </mat-card>
+</div>

@@ -1,0 +1,92 @@
+<h2>Add Address</h2>
+<div>
+  <!-- <div>
+  <label>Hero name:
+    <input #heroName />
+  </label>
+  </div>
+  <div>
+    <label>Last Name:
+      <input #heroName1 />
+    </label>
+    </div> -->
+  <!-- (click) passes input value to add() and then clears the input -->
+
+</div>
+
+
+
+
+<div class="example-container">
+  <mat-card class="example-card">
+    <form class="example-form">
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput #heroName placeholder="Firstname">
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput #heroName1 placeholder="Lastname">
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+      <p>
+        <mat-form-field class="example-full-width">
+          <textarea matInput #add1 placeholder="Address"></textarea>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <textarea matInput #add2 placeholder="Address 2"></textarea>
+        </mat-form-field>
+      </p>
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput #city placeholder="City">
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput #state placeholder="State">
+            </mat-form-field>
+          </td>
+          </tr>
+          <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input matInput #pin maxlength="6" placeholder="Postal Code">
+              <mat-hint align="end">{{pin.value.length}} / 6</mat-hint>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </mat-card>
+
+  <button class="btn" mat-raised-button color="primary" (click)="add(heroName.value, heroName1.value, add1.value, add2.value, city.value, state.value, pin.value); heroName.value=''; heroName1.value = ''; add1.value=''; add2.value=''; city.value='';state.value='';pin.value=''">
+    Add
+  </button>
+</div>
+<br />
+
+<!-- <div class="example-container">
+  <mat-card class="example-card" *ngFor="let hero of heroes">
+    <mat-list role="list">
+      <mat-list-item role="listitem">
+        <h4>{{hero.firstname}} {{hero.lastname}}</h4>
+        <h5>{{hero.address1}} {{hero.address2}}</h5>
+        <h6>{{hero.city}} {{hero.state}} {{hero.pin}}</h6>
+        <button mat-icon-button routerLink='/detail/{{hero.id}}'>
+          <mat-icon mat-list-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button (click)="delete(hero)">
+          <mat-icon mat-list-icon>delete</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+</div> -->

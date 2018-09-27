@@ -1,0 +1,32 @@
+<!-- <h1>{{title}}</h1> -->
+<!-- <h2>Address</h2>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">Add Address </a>
+</nav>
+<router-outlet></router-outlet> -->
+<!-- <app-messages></app-messages> -->
+
+<!-- <div id="container">
+  <app-sidebar></app-sidebar>
+  <div id="content">
+      <router-outlet></router-outlet>
+    </div>
+</div> -->
+<mat-sidenav-container class="example-container">
+    <mat-sidenav class="bg" mode="side" opened>
+      <ul>
+    <li>
+      <a routerLink = "">
+        <i class="material-icons">dashboard</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="heroes">
+        <i class="material-icons">add_circle_outline</i>
+      </a>
+    </li>
+  </ul>
+    </mat-sidenav>
+    <mat-sidenav-content><router-outlet></router-outlet></mat-sidenav-content>
+  </mat-sidenav-container>
