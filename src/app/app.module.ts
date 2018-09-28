@@ -18,7 +18,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 
 //Material-Module
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatIconModule,MatSidenavModule, MatCardModule, MatInputModule, MatButtonModule,MatListModule, MatBottomSheetModule } from "@angular/material";
+import { MatIconModule,MatSidenavModule, MatCardModule, MatInputModule, MatButtonModule,MatListModule, MatBottomSheetModule, MatDialogModule } from "@angular/material";
+import { EditModalComponent } from './edit-modal/edit-modal.component';
 
 @NgModule({
   imports: [
@@ -33,7 +34,9 @@ import { MatIconModule,MatSidenavModule, MatCardModule, MatInputModule, MatButto
     MatButtonModule,
     MatListModule,
     MatBottomSheetModule,
+    MatDialogModule,
     BrowserAnimationsModule,
+    
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
@@ -48,8 +51,10 @@ import { MatIconModule,MatSidenavModule, MatCardModule, MatInputModule, MatButto
     HeroDetailComponent,
     MessagesComponent,
     HeroSearchComponent,
-    SidebarComponent
+    SidebarComponent,
+    EditModalComponent
   ],
+  entryComponents: [EditModalComponent],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
