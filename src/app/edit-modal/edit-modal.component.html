@@ -1,45 +1,45 @@
-<div  *ngIf="hero">
-  <h3 style="font-weight: bold">{{hero.firstname | uppercase}} Details</h3>
+<div  *ngIf="address">
+  <h3 style="font-weight: bold">{{address.firstname | uppercase}} Details</h3>
 
       <table class="example-full-width" cellspacing="0">
           <tr>
             <td>
               <mat-form-field class="example-full-width">
-                <input matInput [(ngModel)]="hero.firstname" placeholder="Firstname">
+                <input matInput [(ngModel)]="address.firstname" placeholder="Firstname">
               </mat-form-field>
             </td>
             <td>
               <mat-form-field class="example-full-width">
-                <input matInput [(ngModel)]="hero.lastname"  placeholder="Lastname">
+                <input matInput [(ngModel)]="address.lastname"  placeholder="Lastname">
               </mat-form-field>
             </td>
           </tr>
         </table>
         <p>
             <mat-form-field class="example-full-width">
-              <textarea matInput [(ngModel)]="hero.address1" placeholder="Address"></textarea>
+              <textarea matInput [(ngModel)]="address.address1" placeholder="Address"></textarea>
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <textarea matInput [(ngModel)]="hero.address2" placeholder="Address 2"></textarea>
+              <textarea matInput [(ngModel)]="address.address2" placeholder="Address 2"></textarea>
             </mat-form-field>
           </p>
           <table class="example-full-width" cellspacing="0">
               <tr>
                 <td>
                   <mat-form-field class="example-full-width">
-                    <input matInput [(ngModel)]="hero.city" placeholder="City">
+                    <input matInput [(ngModel)]="address.city" placeholder="City">
                   </mat-form-field>
                 </td>
                 <td>
                   <mat-form-field class="example-full-width">
-                    <input matInput [(ngModel)]="hero.state" placeholder="State">
+                    <input matInput [(ngModel)]="address.state" placeholder="State">
                   </mat-form-field>
                 </td>
                 </tr>
                 <tr>
                 <td>
                   <mat-form-field class="example-full-width">
-                    <input matInput [(ngModel)]="hero.pin" maxlength="6" placeholder="Postal Code">
+                    <input matInput [(ngModel)]="address.pin" maxlength="6" placeholder="Postal Code">
                   </mat-form-field>
                 </td>
               </tr>
