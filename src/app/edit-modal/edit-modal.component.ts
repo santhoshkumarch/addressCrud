@@ -3,7 +3,7 @@ import { MAT_DIALOG_DATA, MatDialogRef, MatSnackBar } from '@angular/material'
 import { Router, ActivatedRoute } from '@angular/router'
 import { Location } from '@angular/common';
 
-import { Hero }         from '../hero';
+import { Address }         from './../address';
 import { HeroService }  from '../hero.service';
 @Component({
   selector: 'app-edit-modal',
@@ -13,7 +13,7 @@ import { HeroService }  from '../hero.service';
 export class EditModalComponent implements OnInit {
   @ViewChild('modalContentTemplate')
   modalContent: TemplateRef<any>
-  @Input() hero: Hero;
+  @Input() address: Address;
 
   constructor(
     private route: ActivatedRoute,
@@ -32,7 +32,7 @@ export class EditModalComponent implements OnInit {
     // const id = +this.route.snapshot.paramMap.get('id');
     console.log(id);
     this.heroService.getHero(id)
-      .subscribe(hero => this.hero = hero);
+      .subscribe(address => this.address = address);
   }
   onNoClick(): void {
     this.dialogRef.close()
@@ -41,8 +41,8 @@ export class EditModalComponent implements OnInit {
     this.location.back();
   }
   onClickOk() {
-    this.heroService.updateHero(this.hero)
+    this.heroService.updateHero(this.address)
     .subscribe(() => this.goBack());
-    console.log(this.hero)
+    console.log(this.address)
 }
 }

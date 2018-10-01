@@ -1,5 +1,5 @@
-import { Hero } from './hero';
+import { Address } from './address';
 
-export const HEROES: Hero[] = [
-  { id: 11, firstname: 'Mr. Nice', lastname: 'Bravo', address1: '1600 Amphitheatre Pkwy', address2: 'Newyork', city: 'Newyork', state: "Newyork", pin: '604450' },
+export const ADDRESS: Address[] = [
+  { id: 1, firstname: 'Santhosh', lastname: 'Kumar', address1: '1299 Park Avenue', address2: 'Manhattan', city: 'Newyork City', state: "Newyork", pin: '100212' },
 ];

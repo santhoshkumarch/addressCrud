@@ -1,8 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { Hero } from '../hero';
+import { Address } from './../address';
 import { HeroService } from '../hero.service';
 import {MatBottomSheet, MatBottomSheetRef} from '@angular/material';
-import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { EditModalComponent } from '../edit-modal/edit-modal.component';
 
@@ -12,7 +11,7 @@ import { EditModalComponent } from '../edit-modal/edit-modal.component';
   styleUrls: [ './dashboard.component.css' ]
 })
 export class DashboardComponent implements OnInit {
-  heroes: Hero[] = [];
+  add_ress: Address[] = [];
 
   constructor(private heroService: HeroService, public dialog: MatDialog) { }
 
@@ -22,7 +21,7 @@ export class DashboardComponent implements OnInit {
 
   getHeroes(): void {
     this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes);
+      .subscribe(add_ress => this.add_ress = add_ress);
   }
   editDialog(id: string): void{
     const dialogRef = this.dialog.open(EditModalComponent,{
@@ -35,10 +34,10 @@ export class DashboardComponent implements OnInit {
       console.log('The dialog was closed');
     })
   }
-  delete(hero: Hero): void {
+  delete(address: Address): void {
     if(confirm("Are you sure to delete this")){
-    this.heroes = this.heroes.filter(h => h !== hero);
-    this.heroService.deleteHero(hero).subscribe();
+    this.add_ress = this.add_ress.filter(h => h !== address);
+    this.heroService.deleteHero(address).subscribe();
     }
   }
 }
